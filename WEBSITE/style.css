@@ -21,7 +21,7 @@ body {
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 3fr 2fr 2fr;
   grid-template-rows: 1fr 7fr 1fr;
 }
 
@@ -64,6 +64,22 @@ body {
   align-items: center;
 }
 
+.aboutrect {
+  font-family: 'MADSerifFillTrial-BlackItalic';
+  font-size: 65px;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: span 1;
+  border: black 1px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 500;
+  background-color: lightgray;
+  opacity: 0;
+}
+
 .tilewrapper {
   font-family: 'MADSerifFillTrial-BlackItalic';
   font-size: 65px;
@@ -89,6 +105,10 @@ body {
   width: 100%;
   height: 100%;
   /* box-shadow: -5px 5px 10px; */
+}
+
+.opacityfull {
+  opacity: 100%;
 }
 
 .description {
