@@ -55,10 +55,10 @@ body {
   width: 100%;
   min-height: 50px;
   grid-template-columns: 1fr 11fr;
-
 }
 
 .playpause {
+  cursor: pointer;
   display: flex;
   align-items: center;
 }

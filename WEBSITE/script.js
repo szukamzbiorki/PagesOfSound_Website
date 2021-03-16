@@ -1,33 +1,25 @@
 const playpause = document.querySelector(".playpause");
+let audio = new Audio("./podcasts/leon/podcast_1.mp3");
+let playtime = document.querySelector(".playtime");
 
-let audio = new Audio("./pocasts/leon/podcast_1.mp3");
-
-let playtime = document.getElementById("playtime");
-
-playPause.onclick = function() {
+// playpause button
+playpause.onclick = function() {
 if (audio.paused) {
     audio.play();
-    // playpause.classList.remove("icon-play")
-    // playpause.classList.add("icon-stop")
 }
 else {
     audio.pause();
-    // playpause.classList.remove("icon-stop")
-    // playpause.classList.add("icon-play")
   };
 };
 
+//playtimeslider
 const slowclock = function() {
-  playtime.value = audio.currentTime / audio.duration * 100;
+  playtime.value = audio.currentTime / audio.duration * 600;
   // timeindicator1.innerHTML = Math.round(audio.currentTime / 60) + ":" + Math.round(audio.currentTime % 60);
-  // time2.value = george.currentTime / george.duration * 100;
-  // timeindicator2.innerHTML = Math.round(george.currentTime / 60) + ":" + Math.round(george.currentTime % 60);
-}
-
-setIntervalBar = setInterval(slowclock, 1000);
-
+};
+setIntervalBar = setInterval(slowclock, 200);
 playtime.onchange = function() {
-  audio.currentTime = audio.duration * (time1.value / 100);
+  audio.currentTime = audio.duration * (playtime.value / 600);
 }
 
 
