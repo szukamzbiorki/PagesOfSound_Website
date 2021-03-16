@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0px;
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            width: 100%;
+            background-color: white;
+        }
+
+        .box {
+            border: 1px solid black;
+            height: 80px;
+        }
+
+        .title {
+            padding: 12px;
+            height: 80px;
+            width: 100%;
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        .player {
+            height: 80px;
+            width: 100%;
+            font-size: 30px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .player .playpause {
+            height: 80px;
+            width: 80px;
+            text-align: center;
+        }
+
+        .player .slider {
+            margin: auto;
+            margin-left: 20px;
+            margin-right: 20px;
+            width: 100%;
+        }
+
+        .main {
+            margin-top: 160px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .main .names {
+            position: fixed;
+            width: 50%;
+            height: 500px;
+            display: flex;
+            flex-direction: row;
+            /* background-color: blueviolet; */
+        }
+
+        .main .names .row {
+            width: 50%;
+        }
+
+        .main .names .row .name {
+            padding: 12px;
+            font-size: 20px;
+            height: 50px;
+        }
+
+        .main .podcasts {
+            position: absolute;
+            right: 0px;
+            width: 50%;
+        }
+
+        .main .podcasts .cover {
+            width: 100%;
+            height: auto;
+        }
+
+        @media (max-width: 1400px) {
+            .main .names {
+            position: static;
+            width: 100%;
+            flex-direction: column;
+        }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="title box">Pages of Sound</div>
+        <div class="player box">
+            <div class="playpause box">||</div>
+            <input type="range" min="0" max="100" value="0" class="slider">
+        </div>
+    </header>
+    
+    <div class="main">
+        <div class="names">
+            <div class="row">
+                <div class="name box">Alaxander</div>
+                <div class="name box">Antonia</div>
+                <div class="name box">Diana</div>
+                <div class="name box">Iben</div>
+                <div class="name box">Jade</div>
+                <div class="name box">Lara</div>
+                <div class="name box">Matilda</div>
+                <div class="name box">Sonya</div>
+                <div class="name box"></div>
+                <div class="name box"></div>
+                <div class="name box"></div>
+                <div class="name box"></div>
+                <div class="name box"></div>
+            </div>
+            <div class="row">
+                <div class="name box"></div>
+                <div class="name box"></div>
+                <div class="name box"></div>
+                <div class="name box"></div>
+                <div class="name box"></div>
+                <div class="name box"></div>
+                <div class="name box"></div>
+                <div class="name box"></div>
+                <div class="name box"></div>
+                <div class="name box"></div>
+                <div class="name box"></div>
+                <div class="name box"></div>
+                <div class="name box"></div>
+            </div>
+        </div>
+        <div class="podcasts">
+            <img class="cover" src="./leon/cover_1.jpg" alt="">
+            <div class="podcastname box"></div>
+            <img class="cover" src="./leon/cover_1.jpg" alt="">
+            <div class="podcastname box"></div>
+            <img class="cover" src="./leon/cover_1.jpg" alt="">
+            <div class="podcastname box"></div>
+            <img class="cover" src="./leon/cover_1.jpg" alt="">
+            <div class="podcastname box"></div>
+            <img class="cover" src="./leon/cover_1.jpg" alt="">
+            <div class="podcastname box"></div>
+        </div>
+    </div>
+</body>
+
+</html>
