@@ -35,8 +35,8 @@ body {
   grid-row-end: span 1;
   border: black 1px solid;
   display: flex;
-  justify-content: center;
-  align-items: baseline;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 /* .aboutbar {
@@ -59,9 +59,7 @@ body {
   grid-row-start: 2;
   grid-row-end: span 1;
   border: black 1px solid;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
 }
 
 /* .aboutrect {
