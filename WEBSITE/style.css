@@ -108,23 +108,24 @@ body {
   overflow-y: scroll;
 }
 
-<<<<<<< Updated upstream .cover {
+.cover {
   position: relative;
   cursor: pointer;
+}
 
-  =======.player {
-    font-size: 20px;
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: span 1;
-    border: black 1px solid;
-    display: grid;
-    width: 100%;
-    min-height: 50px;
-  }
+.player {
+  font-size: 20px;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: span 1;
+  border: black 1px solid;
+  display: grid;
+  width: 100%;
+  min-height: 50px;
+}
 
-  /* .description {
+/* .description {
   grid-column-start: 1;
   grid-column-end: 4;
   grid-row-start: 3;
