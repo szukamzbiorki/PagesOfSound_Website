@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'MADSerifFillTrial-BlackItalic';
+  font-family: 'MADSerifFill BlackItalic';
   src: url('font_files/MADSerifFillTrial-BlackItalic.ttf') format('truetype'),
     url('font_files/MADSerifFillTrial-BlackItalic.woff') format('woff'),
     url('font_files/MADSerifFillTrial-BlackItalic.woff2') format('woff2');
@@ -39,7 +39,7 @@ body {
   width: 100vw;
   height: 100vh;
   margin: 0;
-  font-family: 'MADSerifFillTrial-BlackItalic';
+  font-family: 'MADSerifFill BlackItalic';
 }
 
 .wrapper {
