@@ -6,10 +6,18 @@ const player = document.querySelector(".player");
 const podcastone = document.querySelector(".one");
 const podcasttwo = document.querySelector(".two");
 const podcasttree = document.querySelector(".tree");
+const namename = document.querySelector(".name");
+
+//name selector
+namename.addEventListener('click', function(e) {
+  console.log(e);
+});
 
 //podcastselector123
 podcastone.addEventListener('click', function(e) {
   audio.src = "./podcasts/leon/podcast_1.mp3"
+  console.log(e);
+
 });
 podcasttwo.addEventListener('click', function(e) {
   audio.src = "./podcasts/leon/podcast_2.mp3"
