@@ -7,6 +7,23 @@
   font-style: normal;
 }
 
+
+@font-face {
+  font-family: 'Diatype Mono';
+  src: url('font_files/ABCDiatypeMono-Medium-Trial.otf') format('opentype '),
+    url('font_files/ABCDiatypeMono-Medium-Trial.woff') format('woff'),
+    url('font_files/ABCDiatypeMono-Medium-Trial.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Soyuz Grotesk';
+  src: url('font_files/Soyuz Grotesk Bold.otf') format('opentype'),
+    url('font_files/SoyuzGroteskBold.woff') format('woff'),
+    font-weight: normal;
+}
+
 :root {
   --grey: rgb(228, 226, 227);
   --red: rgb(226, 58, 49);
