@@ -9,7 +9,7 @@
 
 :root {
   --grey: rgb(151, 151, 151);
-  --red: rgb(247, 60, 54);
+  --red: rgb(255, 53, 46);
 }
 
 *{
@@ -22,7 +22,7 @@ body {
   width: 100vw;
   height: 100vh;
   margin: 0;
-  font-family: 'MADSerifFillTrial-BlackItalic';
+  font-family: sans-serif;
 }
 
 .wrapper {
@@ -70,7 +70,7 @@ body {
 }
 
 .playpause:hover{
-  color: var(--red);
+  background-color: var(--red);
 }
 
 .namewrapper {
@@ -86,47 +86,6 @@ body {
   /* justify-items: center; */
 }
 
-.podcasts {
-  overflow: scroll;
-  position: relative;
-  right: 0px;
-  width: 100%;
-}
-
-.cover {
-  position: relative;
-  cursor: pointer;
-  width: 100%;
-  padding-top: 100%;
-}
-
-.coverimg {
-  opacity: 100%;
-  position:  absolute;
-   top: 0;
-   left: 0;
-   bottom: 0;
-   right: 0;
-  width: 100%;
-  height: auto;
-  transition: 0.2s;
-}
-.coverimg:hover{
-  opacity: 0%;
-}
-
-.textoverlay {
-  position:  absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  text-align: center;
-  font-size: 40px;
-  background-color: var(--red);
-}
-
-
 .namewrapper .name {
   border: black 1px solid;
   font-size: 20px;
@@ -138,10 +97,56 @@ body {
   /* width: 100%;
   height: 100%; */
   /* box-shadow: -5px 5px 10px; */
+  transition: 0.1s;
 }
 
 .namewrapper .name:hover{
-  color: var(--red);
+  background-color: var(--red);
+}
+
+.podcasts {
+  overflow: scroll;
+  position: relative;
+  right: 0px;
+  width: 100%;
+}
+
+.podcasts .cover {
+  position: relative;
+  cursor: pointer;
+  width: 100%;
+  padding-top: 100%;
+  overflow: hidden;
+}
+
+.podcasts .cover .coverimg {
+  /* opacity: 100%; */
+  position:  absolute;
+   top: 0;
+   left: 0;
+   bottom: 0;
+   right: 0;
+  width: 100%;
+  height: auto;
+}
+
+.podcasts .cover .textoverlay {
+  padding: 1000px;
+  z-index: 1;
+  position:  absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  /* text-align: center; */
+  font-size: 10vw;
+  background-color: var(--red);
+  opacity: 0%;
+  transition: 0.2s;
+}
+
+.podcasts .cover .textoverlay:hover{
+  opacity: 100%;
 }
 
 .opacityfull {
