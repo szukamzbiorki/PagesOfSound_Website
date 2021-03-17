@@ -12,9 +12,9 @@ podcastone.addEventListener('click', function(e) {
 podcasttwo.addEventListener('click', function(e) {
   audio.src = "./podcasts/leon/podcast_2.mp3"
 });
-podcasttree.addEventListener('click', function(e) {
-  audio.src = "/podcasts/" + name of selected + "/podcast_3.mp3"
-});
+// podcasttree.addEventListener('click', function(e) {
+//   audio.src = "/podcasts/" + name of selected + "/podcast_3.mp3"
+// });
 
 
 // playpause button
