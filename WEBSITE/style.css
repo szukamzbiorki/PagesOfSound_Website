@@ -110,6 +110,10 @@ body {
   width: 100%;
 }
 
+.podcast {
+  margin-bottom: 15px;
+}
+
 .cover {
   position: relative;
   cursor: pointer;
