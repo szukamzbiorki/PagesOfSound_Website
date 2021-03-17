@@ -7,7 +7,6 @@
   font-style: normal;
 }
 
-
 @font-face {
   font-family: 'Diatype Mono';
   src: url('font_files/ABCDiatypeMono-Medium-Trial.otf') format('opentype '),
@@ -22,6 +21,7 @@
   src: url('font_files/Soyuz Grotesk Bold.otf') format('opentype'),
     url('font_files/SoyuzGroteskBold.woff') format('woff'),
     font-weight: normal;
+  font-style: normal;
 }
 
 :root {
@@ -64,6 +64,7 @@ body {
   justify-content: flex-start;
   align-items: center;
   padding-left: 20px;
+  font-family: 'Soyuz Grotesk';
 }
 
 .player {
@@ -159,6 +160,7 @@ body {
   /* width: 100%;
   height: 100%; */
   /* box-shadow: -5px 5px 10px; */
+  font-family: 'Diatype Mono';
 }
 
 .namewrapper .name:hover {
