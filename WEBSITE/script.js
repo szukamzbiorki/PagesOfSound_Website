@@ -1,6 +1,8 @@
 const playpause = document.querySelector(".playpause");
 let audio = new Audio("./podcasts/leon/podcast_1.mp3");
 let playtime = document.querySelector(".playtime");
+let volumeslider = document.querySelector(".volume");
+const player = document.querySelector(".player");
 const podcastone = document.querySelector(".one");
 const podcasttwo = document.querySelector(".two");
 const podcasttree = document.querySelector(".tree");
@@ -16,9 +18,8 @@ podcasttwo.addEventListener('click', function(e) {
 //   audio.src = "/podcasts/" + name of selected + "/podcast_3.mp3"
 // });
 
-
 // playpause button
-playpause.onclick = function() {
+playpause.addEventListener('click', function(e) {
 if (audio.paused) {
     audio.play();
     playpause.innerHTML = "pause"
@@ -27,7 +28,7 @@ else {
     audio.pause();
     playpause.innerHTML = "play"
   };
-};
+});
 
 //playtimeslider
 const slowclock = function() {
@@ -38,12 +39,7 @@ setIntervalBar = setInterval(slowclock, 200);
 playtime.onchange = function() {
   audio.currentTime = audio.duration * (playtime.value / 600);
 }
-
-
-// var about = document.getElementById("aboutrect");
-// function opacityChange() {
-//   about.classList.add("opacityfull");
-// }
-// function opacityNone() {
-//   about.classList.remove("opacityfull");
-// }
+// volume slider
+volumeslider.onchange = function() {
+  audio.volume = volumeslider.value/100;
+};

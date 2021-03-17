@@ -8,8 +8,8 @@
 }
 
 :root {
-  --grey: rgb(228, 226, 227);
-  --red: rgb(226, 58, 49);
+  --grey: rgb(151, 151, 151);
+  --red: rgb(247, 60, 54);
 }
 
 *{
@@ -59,7 +59,7 @@ body {
   display: grid;
   width: 100%;
   min-height: 50px;
-  grid-template-columns: 1fr 11fr;
+  grid-template-columns: 1fr 1fr 12fr;
 }
 
 .playpause {
