@@ -7,6 +7,23 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Diatype Mono';
+  src: url('font_files/ABCDiatypeMono-Medium-Trial.otf') format('opentype '),
+    url('font_files/ABCDiatypeMono-Medium-Trial.woff') format('woff'),
+    url('font_files/ABCDiatypeMono-Medium-Trial.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Soyuz Grotesk';
+  src: url('font_files/Soyuz Grotesk Bold.otf') format('opentype'),
+    url('font_files/SoyuzGroteskBold.woff') format('woff'),
+    font-weight: normal;
+  font-style: normal;
+}
+
 :root {
   --grey: rgb(228, 226, 227);
   --red: rgb(226, 58, 49);
@@ -17,7 +34,7 @@
 }
 
 body {
-  background-color: var(--grey);
+  background-color: rgb(180, 180, 183);
   overflow: hidden;
   width: 100vw;
   height: 100vh;
@@ -36,8 +53,8 @@ body {
 }
 
 .titlebar {
-  padding-left: 10px;
-  font-size: 20px;
+  font-family: 'Soyuz Grotesk';
+  font-size: 40px;
   grid-column-start: 1;
   grid-column-end: 3;
   grid-row-start: 1;
@@ -46,7 +63,7 @@ body {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding-left: 20px;
+  padding-left: 60px;
 }
 
 .player {
@@ -136,18 +153,19 @@ body {
   font-size: 20px;
   display: flex;
   padding-left: 10px;
-  /* justify-content: center; */
+  padding-right: 20px;
+  justify-content: flex-end;
   align-items: center;
   /* border-radius: 25px; */
   /* width: 100%;
   height: 100%; */
   /* box-shadow: -5px 5px 10px; */
+  font-family: 'Diatype Mono';
 }
 
-.namewrapper .name:hover {
+/* .namewrapper .name:hover {
   color: var(--red);
-}
-
+} */
 .opacityfull {
   opacity: 100%;
 }
