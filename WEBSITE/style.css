@@ -19,8 +19,8 @@
 @font-face {
   font-family: 'Soyuz Grotesk';
   src: url('font_files/Soyuz Grotesk Bold.otf') format('opentype'),
-    url('font_files/SoyuzGroteskBold.woff') format('woff'),
-    font-weight: normal;
+    url('font_files/SoyuzGroteskBold.woff') format('woff');
+  font-weight: normal;
   font-style: normal;
 }
 
