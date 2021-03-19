@@ -53,8 +53,8 @@ body {
 }
 
 .titlebar {
-  padding-left: 50px;
-  font-size: 35px;
+  padding-left: 4vw;
+  font-size: 3.4vh;
   grid-column-start: 1;
   grid-column-end: 3;
   grid-row-start: 1;
@@ -150,7 +150,7 @@ body {
 
 .namewrapper .name {
   border: black 1px solid;
-  font-size: 20px;
+  font-size: 2vh;
   display: flex;
   padding-left: 10px;
   padding-right: 15px;
