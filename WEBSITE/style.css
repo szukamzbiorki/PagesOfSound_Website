@@ -19,8 +19,8 @@
 @font-face {
   font-family: 'Soyuz Grotesk';
   src: url('font_files/Soyuz Grotesk Bold.otf') format('opentype'),
-    url('font_files/SoyuzGroteskBold.woff') format('woff'),
-    font-weight: normal;
+    url('font_files/SoyuzGroteskBold.woff') format('woff');
+  font-weight: normal;
   font-style: normal;
 }
 
@@ -110,7 +110,7 @@ body {
   transition: 0.1s;
 }
 
-.namewrapper .name:hover{
+.namewrapper .name:hover {
   background-color: var(--red);
 }
 
@@ -131,11 +131,11 @@ body {
 
 .podcasts .cover .coverimg {
   /* opacity: 100%; */
-  position:  absolute;
-   top: 0;
-   left: 0;
-   bottom: 0;
-   right: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
   width: 100%;
   height: auto;
 }
@@ -143,7 +143,7 @@ body {
 .podcasts .cover .textoverlay {
   padding: 1000px;
   z-index: 1;
-  position:  absolute;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -155,7 +155,7 @@ body {
   transition: 0.2s;
 }
 
-.podcasts .cover .textoverlay:hover{
+.podcasts .cover .textoverlay:hover {
   opacity: 100%;
 }
 
@@ -177,7 +177,6 @@ body {
 /* .namewrapper .name:hover {
   color: var(--red);
 } */
-
 .opacityfull {
   opacity: 100%;
 }
