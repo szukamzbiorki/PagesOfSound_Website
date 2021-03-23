@@ -1,4 +1,8 @@
 const playpause = document.querySelector(".playpause");
+const squarediv = document.querySelector(".squarediv");
+
+
+squarediv.style.width = squarediv.offsetHeight;
 
 let audio = new Audio("./podcasts/Bartosz Pierscinski/podcast_1.mp3");
 

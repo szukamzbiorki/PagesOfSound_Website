@@ -80,10 +80,16 @@ body {
 }
 
 .playpause {
-  padding-left: 10px;
+  /* width: 100%;
+  padding-bottom: 100%; */
   cursor: pointer;
   display: flex;
   align-items: center;
+}
+
+.squarediv {
+  height: 100%;
+  width: auto;
 }
 
 .playpause:hover {
