@@ -1,9 +1,11 @@
 # PagesOfSound_Website
- KABK Design Project
+## KABK Design Project
 
 
 Contributors:
-Stefaniia Bodnia
-Leon de Bruijn
-Moto Sasaki
-Bartek Pierściński
+*Stefaniia Bodnia @StefaBodnia
+*Leon de Bruijn @blobsaland
+*Moto Sasaki @msasaki97
+*Bartek Pierściński @szukamzbiorki
+
+See the results of the work at [PagesOfSound Website](http://pagesofsound.online/).
