@@ -1,0 +1,24 @@
+@font-face {
+  font-family: 'Diatype Mono';
+  src: url('font_files/ABCDiatypeMono-Medium-Trial.otf') format('opentype '),
+    url('font_files/ABCDiatypeMono-Medium.woff') format('woff'),
+    url('font_files/ABCDiatypeMono-Medium.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Diatype Mono";
+  font-size: 30px;
+}
