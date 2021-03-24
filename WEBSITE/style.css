@@ -100,16 +100,27 @@ body {
 }
 
 .namewrapper .name {
+  display: flex;
+  align-items: center;
+
+  border: var(--border);
+  /* padding-left: 1rem;
+  padding-right: 1rem; */
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.namewrapper .name div{ 
+  pointer-events: none;
   display: inline-block;
   white-space: nowrap;
   overflow:hidden;
   text-overflow: ellipsis;
 
-  border: var(--border);
   padding-left: 1rem;
   padding-right: 1rem;
-  cursor: pointer;
-  transition: 0.1s;
 }
 
 .podcasts {

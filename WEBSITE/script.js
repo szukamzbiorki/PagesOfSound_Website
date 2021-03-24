@@ -4,7 +4,7 @@ const squarediv = document.querySelector(".squarediv");
 
 // squarediv.style.width = squarediv.offsetHeight;
 
-let current_student = "bartosz";
+let current_student = "stefanniia";
 let audio = new Audio("./podcasts/"+current_student+"/podcast_1.mp3");
 
 let playtime = document.querySelector(".playtime");
@@ -30,8 +30,6 @@ function setImages (current_student) {
   coverimg3.src = "./podcasts/"+current_student+"/cover_3.jpg"
 }
 
-setImages(current_student)
-
 Name.addEventListener("click", function (clickname) {
   current_student = clickname.target.dataset.name
   // current_student = clickname.target.lastChild.textContent;
@@ -51,6 +49,8 @@ podcasttwo.addEventListener('click', function(e) {
 podcasttree.addEventListener('click', function(e) {
   audio.src = "/podcasts/"+current_student+"/podcast_3.mp3"
 });
+
+setImages(current_student)
 
 // playpause button
 playpause.addEventListener('click', function(e) {
