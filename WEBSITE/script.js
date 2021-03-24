@@ -4,7 +4,8 @@ const squarediv = document.querySelector(".squarediv");
 
 squarediv.style.width = squarediv.offsetHeight;
 
-let audio = new Audio("./podcasts/Bartosz Pierscinski/podcast_1.mp3");
+let current_student = "bartosz";
+let audio = new Audio("./podcasts/"+current_student+"/podcast_1.mp3");
 
 let playtime = document.querySelector(".playtime");
 let volumeslider = document.querySelector(".volume");
@@ -21,23 +22,34 @@ const coverimg2 = document.querySelector(".coverimg2")
 const coverimg3 = document.querySelector(".coverimg3")
 
 //name selector
+
+function setImages (current_student) {
+  console.log(`./podcasts/${current_student}/cover_1.jpg`)
+  coverimg1.src = "./podcasts/"+current_student+"/cover_1.jpg"
+  coverimg2.src = "./podcasts/"+current_student+"/cover_2.jpg"
+  coverimg3.src = "./podcasts/"+current_student+"/cover_3.jpg"
+}
+
+setImages(current_student)
+
 Name.addEventListener("click", function (clickname) {
-  console.log("./podcasts/"+clickname.target.lastChild.textContent+"/cover_1.jpg");
-  coverimg1.src = "./podcasts/"+clickname.target.lastChild.textContent+"/cover_1.jpg"
-  coverimg2.src = "./podcasts/"+clickname.target.lastChild.textContent+"/cover_2.jpg"
-  coverimg3.src = "./podcasts/"+clickname.target.lastChild.textContent+"/cover_3.jpg"
+  current_student = clickname.target.dataset.name
+  // current_student = clickname.target.lastChild.textContent;
+
+  console.log("./podcasts/"+current_student+"/cover_1.jpg");
+  setImages(current_student)
 });
 
 //podcastselector123
 podcastone.addEventListener('click', function(e) {
-  audio.src = "./podcasts/Bartosz Pierscinski/podcast_1.mp3"
+  audio.src = "./podcasts/"+current_student+"/podcast_1.mp3"
   console.log(clicknamefunc());
 });
 podcasttwo.addEventListener('click', function(e) {
-  audio.src = "./podcasts/Bartosz Pierscinski/podcast_2.mp3"
+  audio.src = "./podcasts/"+current_student+"/podcast_2.mp3"
 });
 podcasttree.addEventListener('click', function(e) {
-  audio.src = "/podcasts/"+ +"/podcast_3.mp3"
+  audio.src = "/podcasts/"+current_student+"/podcast_3.mp3"
 });
 
 // playpause button
