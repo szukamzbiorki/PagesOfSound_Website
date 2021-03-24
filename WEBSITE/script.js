@@ -2,7 +2,7 @@
 const playpause = document.querySelector(".playpause");
 const squarediv = document.querySelector(".squarediv");
 
-squarediv.style.width = squarediv.offsetHeight;
+// squarediv.style.width = squarediv.offsetHeight;
 
 let current_student = "bartosz";
 let audio = new Audio("./podcasts/"+current_student+"/podcast_1.mp3");
