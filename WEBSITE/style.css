@@ -78,10 +78,10 @@ body {
 }
 
 .playpause {
-  padding-left: 20px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
+  margin: auto;
+    padding-left: 20px;
+    cursor: pointer;
+    font-size: 30px;
 }
 
 .squarediv {
@@ -102,7 +102,6 @@ body {
 .namewrapper .name {
   display: flex;
   align-items: center;
-
   border: var(--border);
   /* padding-left: 1rem;
   padding-right: 1rem; */
