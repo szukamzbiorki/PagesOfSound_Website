@@ -56,11 +56,11 @@ setImages(current_student)
 playpause.addEventListener('click', function(e) {
 if (audio.paused) {
     audio.play();
-    playpause.innerHTML = "&#x25A1"
+    playpause.innerHTML = "&#x25A0"
 }
 else {
     audio.pause();
-    playpause.innerHTML = "&#x25B7"
+    playpause.innerHTML = "&#x25B6"
   };
 });
 
