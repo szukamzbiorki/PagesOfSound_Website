@@ -1,6 +1,6 @@
+//play pause square
 const playpause = document.querySelector(".playpause");
 const squarediv = document.querySelector(".squarediv");
-
 
 squarediv.style.width = squarediv.offsetHeight;
 
