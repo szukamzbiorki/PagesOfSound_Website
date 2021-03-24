@@ -25,7 +25,7 @@
 }
 
 :root {
-  --grey: rgb(105, 105, 105);
+  --grey: rgb(131, 131, 131);
   --red: rgb(255, 53, 46);
   --border: black 1px solid;
 }
@@ -40,8 +40,7 @@ body {
   width: 100vw;
   height: 100vh;
   margin: 0;
-  /* font-size: 2rem; */
-  font-size: clamp(0.8rem, 1.5vw, 2rem);
+  font-size: clamp(1.1rem, 1.5vw, 2rem);
   font-family: 'Diatype Mono';
 }
 
@@ -76,10 +75,10 @@ body {
   display: grid;
   width: 100%;
   grid-template-columns: 1fr 1fr 12fr;
-
 }
 
 .playpause {
+  padding-left: 20px;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -101,13 +100,16 @@ body {
 }
 
 .namewrapper .name {
-  display: flex;
-  transition: 0.1s;
+  display: inline-block;
+  white-space: nowrap;
+  overflow:hidden;
+  text-overflow: ellipsis;
+
   border: var(--border);
   padding-left: 1rem;
   padding-right: 1rem;
-  align-items: center;
   cursor: pointer;
+  transition: 0.1s;
 }
 
 .podcasts {
