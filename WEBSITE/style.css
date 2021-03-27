@@ -1,13 +1,4 @@
 @font-face {
-  font-family: 'MADSerifFill BlackItalic';
-  src: url('font_files/MADSerifFillTrial-BlackItalic.ttf') format('truetype'),
-    url('font_files/MADSerifFillTrial-BlackItalic.woff') format('woff'),
-    url('font_files/MADSerifFillTrial-BlackItalic.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
   font-family: 'Diatype Mono';
   src: url('font_files/ABCDiatypeMono-Medium-Trial.otf') format('opentype '),
     url('font_files/ABCDiatypeMono-Medium.woff') format('woff'),
@@ -65,6 +56,7 @@ body {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  font-family: "Soyuz Grotesk";
 }
 
 .player {
@@ -79,9 +71,9 @@ body {
 
 .playpause {
   margin: auto;
-    padding-left: 20px;
-    cursor: pointer;
-    font-size: 30px;
+  padding-left: 20px;
+  cursor: pointer;
+  font-size: 30px;
 }
 
 .squarediv {
@@ -111,18 +103,18 @@ body {
   z-index: 1;
 }
 
-.namewrapper .name div{ 
+.namewrapper .name div {
   pointer-events: none;
   display: inline-block;
   white-space: nowrap;
-  overflow:hidden;
+  overflow: hidden;
   text-overflow: ellipsis;
-
   padding-left: 1rem;
   padding-right: 1rem;
 }
 
 .podcasts {
+  position: relative;
   overflow: scroll;
   width: 100%;
   grid-column-start: 2;
@@ -169,6 +161,67 @@ body {
 
 .podcasts .cover .textoverlay:hover {
   opacity: 100%;
+}
+
+.infobar {
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: "Diatype Mono";
+  z-index: 50;
+  position: fixed;
+  height: calc(100vh/15);
+  bottom: 0;
+  width: 50vw;
+  max-width: 50vw;
+  background-color: var(--grey);
+  border-top: var(--border);
+  -webkit-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  transition: bottom 0.5s ease-out;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: flex-start;
+}
+
+/* .leftinfo {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  max-width: 400px;
+}
+
+.rightinfo {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  align-self: flex-end;
+  max-width: 200px;
+} */
+.infobar.up1 {
+  bottom: calc(100vh/15*13);
+}
+
+.inforect {
+  padding: 20px;
+  z-index: 50;
+  position: fixed;
+  height: calc(100vh/15*13);
+  bottom: calc(-100vh/15*13);
+  width: 100%;
+  background-color: var(--grey);
+  border-top: var(--border);
+  -webkit-transition: bottom 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  transition: bottom 0.5s ease-out;
+  width: 50vw;
+}
+
+.inforect.up2 {
+  bottom: 0;
 }
 
 input[type=range] {
