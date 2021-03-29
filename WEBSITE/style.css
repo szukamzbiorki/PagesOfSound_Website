@@ -194,6 +194,7 @@ body {
   max-width: 50vw;
   background-color: var(--grey);
   border-top: var(--border);
+  border-bottom: var(--border);
   -webkit-transition: all 0.5s ease-out;
   -o-transition: all 0.5s ease-out;
   -moz-transition: all 0.5s ease-out;
@@ -221,6 +222,7 @@ body {
 } */
 .infobar.up1 {
   bottom: calc(100vh/15*13);
+  border-top: 0;
 }
 
 .inforect {
@@ -231,7 +233,7 @@ body {
   bottom: calc(-100vh/15*13);
   width: 100%;
   background-color: var(--grey);
-  border-top: var(--border);
+  /* border-top: var(--border); */
   -webkit-transition: bottom 0.5s ease-out;
   -o-transition: all 0.5s ease-out;
   -moz-transition: all 0.5s ease-out;
