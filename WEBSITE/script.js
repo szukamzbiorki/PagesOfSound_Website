@@ -60,8 +60,35 @@ function setFiles(current_student) {
   $.getJSON("./podcasts/"+current_student+"/contents.json", function(json){
     // console.log(json);
     globaldata = json;
-    leftinfo.innerHTML = globaldata.title1;
+    var titles=[];
+    titles[0] = globaldata.title1;
+    titles[1] = globaldata.title2;
+    titles[2] = globaldata.title3;
+    // leftinfo.innerHTML = globaldata.title1;
     inforect.innerHTML = globaldata.description;
+    $(".podcasts").scroll(function (event) {
+        var scroll = $(".podcasts").scrollTop();
+        console.log(scroll);
+
+      // console.log(podcasts);
+      let current = "";
+      podcasts.forEach((podcast) => {
+        const sectionTop = podcast.offsetTop;
+        // console.log(podcast.offsetTop);
+        const sectionHeight = podcast.clientHeight;
+        // console.log(podcast.clientHeight);
+        // console.log(window.pageYOffset);
+        if (scroll >= sectionTop - sectionHeight / 2) {
+          current = podcast.getAttribute("number");
+          console.log(current);
+          // console.log
+        }
+      });
+    rightinfo.innerHTML = current + "/3";
+    leftinfo.innerHTML = titles[current-1];
+
+    });
+
   });
 }
 
@@ -130,28 +157,3 @@ volumeslider.onchange = function() {
 const podcast_div = document.querySelector(".podcasts");
 const podcasts = document.querySelectorAll(".podcast");
 // const navLi = document.querySelectorAll("nav .container ul li");
-
-
-
-$(".podcasts").scroll(function (event) {
-    var scroll = $(".podcasts").scrollTop();
-    console.log(scroll);
-
-  // console.log(podcasts);
-  let current = "";
-  podcasts.forEach((podcast) => {
-    const sectionTop = podcast.offsetTop;
-    // console.log(podcast.offsetTop);
-    const sectionHeight = podcast.clientHeight;
-    // console.log(podcast.clientHeight);
-    // console.log(window.pageYOffset);
-    if (scroll >= sectionTop - sectionHeight / 2) {
-      current = podcast.getAttribute("number");
-      console.log(current);
-      // console.log
-    }
-  });
-rightinfo.innerHTML = current + "/3";
-// leftinfo.innerHTML = titles[current];
-
-});
