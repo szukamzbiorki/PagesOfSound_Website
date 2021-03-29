@@ -27,42 +27,48 @@ const podcastone = document.querySelector(".one");
 const podcasttwo = document.querySelector(".two");
 const podcasttree = document.querySelector(".tree");
 
-let Name = document.querySelector(".namewrapper");
+let names = document.querySelector(".namewrapper");
 
-const coverimg1 = document.querySelector(".coverimg1")
-const coverimg2 = document.querySelector(".coverimg2")
-const coverimg3 = document.querySelector(".coverimg3")
+const coverimg1 = document.querySelector(".coverimg1");
+const coverimg2 = document.querySelector(".coverimg2");
+const coverimg3 = document.querySelector(".coverimg3");
+
+const leftinfo = document.querySelector("#leftinfo");
+const inforect = document.querySelector("#inforect");
+// const contents_indiv = document.querySelector("#contents_indiv");
 
 //name selector
 
-function setImages (current_student) {
-  console.log(`./podcasts/${current_student}/cover_1.jpg`)
-  coverimg1.src = "./podcasts/"+current_student+"/cover_1.jpg"
-  coverimg2.src = "./podcasts/"+current_student+"/cover_2.jpg"
-  coverimg3.src = "./podcasts/"+current_student+"/cover_3.jpg"
+function setFiles(current_student) {
+  // console.log(`./podcasts/${current_student}/cover_1.jpg`)
+  coverimg1.src = "./podcasts/"+current_student+"/cover_1.jpg";
+  coverimg2.src = "./podcasts/"+current_student+"/cover_2.jpg";
+  coverimg3.src = "./podcasts/"+current_student+"/cover_3.jpg";
+  document.getElementById("contents_indiv").src = "./podcasts/"+current_student+"/contents.js";
+  // import { person_data } from "./podcasts/"+current_student+"/contents.js";
+  // console.log(person_data.title1);
 }
 
-Name.addEventListener("click", function (clickname) {
-  current_student = clickname.target.dataset.name
-  // current_student = clickname.target.lastChild.textContent;
+names.addEventListener("click", function (clickname) {
+  current_student = clickname.target.dataset.name;
+  setFiles(current_student);
+  // leftinfo.innerHTML = person_data.title1;
+  // inforect.innerHTML = description;
 
-  console.log("./podcasts/"+current_student+"/cover_1.jpg");
-  setImages(current_student)
 });
 
 //podcastselector123
 podcastone.addEventListener('click', function(e) {
-  audio.src = "./podcasts/"+current_student+"/podcast_1.mp3"
-  console.log(clicknamefunc());
+  audio.src = "./podcasts/"+current_student+"/podcast_1.mp3";
 });
 podcasttwo.addEventListener('click', function(e) {
-  audio.src = "./podcasts/"+current_student+"/podcast_2.mp3"
+  audio.src = "./podcasts/"+current_student+"/podcast_2.mp3";
 });
 podcasttree.addEventListener('click', function(e) {
-  audio.src = "./podcasts/"+current_student+"/podcast_3.mp3"
+  audio.src = "./podcasts/"+current_student+"/podcast_3.mp3";
 });
 
-setImages(current_student)
+setFiles(current_student);
 
 // playpause button
 playpause.addEventListener('click', function(e) {

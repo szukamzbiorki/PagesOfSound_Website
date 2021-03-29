@@ -48,7 +48,7 @@ body {
 
 .titlebar {
   padding-left: 1rem;
-  font-size: 35px;
+  font-size: clamp(24px, 2vw, 600px);
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row-start: 1;
@@ -196,7 +196,7 @@ body {
 
 .podcasts .cover .textoverlay .rectangle {
   /* padding: 10px; */
-  z-index: 2;
+  /* z-index: 1; */
   width: 200px;
   height: calc(100vh/15);
   border: var(--border);
