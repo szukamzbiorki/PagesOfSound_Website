@@ -4,6 +4,17 @@ const squarediv = document.querySelector(".squarediv");
 
 // squarediv.style.width = squarediv.offsetHeight;
 
+// const infobar = document.querySelector("#infobar");
+// const inforect = document.queryselector("#inforect");
+
+//slide up on click
+
+$("#infobar").click(function(){
+  $("#infobar").toggleClass("up1");
+  $("#inforect").toggleClass("up2");
+});
+
+
 let current_student = "stefanniia";
 let audio = new Audio("./podcasts/"+current_student+"/podcast_1.mp3");
 
