@@ -134,6 +134,14 @@ body {
   z-index: 1;
 }
 
+.namewrapper .name:hover {
+  background-color: var(--red);
+}
+
+.namewrapper .current_student{
+  background-color: var(--red);
+}
+
 .namewrapper .name div {
   pointer-events: none;
   display: inline-block;

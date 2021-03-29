@@ -42,6 +42,7 @@ const inforect = document.querySelector("#inforect");
 
 //name selector
 names.addEventListener("click", function (clickname) {
+  document.querySelector(".current_student").classList.remove("current_student");
   current_student = clickname.target.dataset.name;
   setFiles(current_student);
   // console.log(globaldata);
