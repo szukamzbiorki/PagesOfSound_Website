@@ -18,7 +18,7 @@
 :root {
   --grey: rgb(131, 131, 131);
   --red: rgb(255, 53, 46);
-  --border: black 1px solid;
+  --border: black 1px dotted;
 }
 
 * {
@@ -33,6 +33,7 @@ body {
   margin: 0;
   font-size: clamp(1.1rem, 1.5vw, 2rem);
   font-family: 'Diatype Mono';
+  font-feature-settings: "ss15", "ss07";
 }
 
 .wrapper {
@@ -41,7 +42,7 @@ body {
   height: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 2fr;
-  grid-template-rows: 1fr 1fr 13fr;
+  grid-template-rows: 1fr 1fr 12fr 1fr;
   overflow: hidden;
 }
 
@@ -58,6 +59,7 @@ body {
   align-items: center;
   font-family: "Soyuz Grotesk";
   overflow: hidden;
+  z-index: 51;
 }
 
 .player {
@@ -102,7 +104,7 @@ body {
   grid-column-start: 1;
   grid-column-end: 3;
   grid-row-start: 3;
-  grid-row-end: span 1;
+  grid-row-end: span 2;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(13, 1fr);
@@ -139,11 +141,12 @@ body {
   grid-column-start: 3;
   grid-column-end: 4;
   grid-row-start: 2;
-  grid-row-end: 14;
+  grid-row-end: 4;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(13, 1fr);
-  padding-bottom: calc(100vw/13);
+  /* padding-bottom: calc(100vw / 13); */
+  margin: 0;
 }
 
 .podcasts .cover {
@@ -165,22 +168,42 @@ body {
 }
 
 .podcasts .cover .textoverlay {
-  padding: 1000px;
+  /* padding: 10px; */
   z-index: 1;
+  top: 0;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  font-size: 10vw;
-  mix-blend-mode: luminosity;
-  background-color: var(--grey);
+  width: 100%;
+  height: 100%;
+  /* font-size: 1vw; */
+  background-color: 0;
   opacity: 0%;
   transition: 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.podcasts .cover .textoverlay .rectangle {
+  /* padding: 10px; */
+  z-index: 2;
+  width: 200px;
+  height: calc(100vh/15);
+  border: var(--border);
+  /* font-size: 1vw; */
+  background-color: var(--grey);
+  /* opacity: 100; */
+  transition: 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 }
 
 .podcasts .cover .textoverlay:hover {
   opacity: 100%;
+  /* filter: brightness(0.8); */
+  /* filter: drop-shadow(); */
 }
 
 .infobar {
@@ -189,7 +212,7 @@ body {
   font-family: "Diatype Mono";
   z-index: 50;
   position: fixed;
-  height: calc(100vh/15);
+  height: calc(100vh / 15 + 1px);
   bottom: 0;
   width: 50vw;
   max-width: 50vw;
@@ -224,7 +247,7 @@ body {
 } */
 .infobar.up1 {
   bottom: calc(100vh/15*13);
-  border-top: 0;
+  border-top: 1;
 }
 
 .inforect {
