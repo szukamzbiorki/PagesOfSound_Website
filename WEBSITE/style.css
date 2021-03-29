@@ -61,7 +61,7 @@ body {
   grid-column-end: 3;
   grid-row-start: 1;
   grid-row-end: span 1;
-  border: var(--border);
+  border-bottom: var(--border);
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -71,7 +71,8 @@ body {
   grid-column-start: 1;
   grid-column-end: 1;
   grid-row-start: 2;
-  border: var(--border);
+  border-bottom: var(--border);
+  border-right: var(--border);
   display: grid;
   width: 100%;
   grid-template-columns: 1fr 1fr 12fr;
@@ -79,9 +80,9 @@ body {
 
 .playpause {
   margin: auto;
-    padding-left: 20px;
-    cursor: pointer;
-    font-size: 30px;
+  padding-left: 20px;
+  cursor: pointer;
+  font-size: 30px;
 }
 
 .squarediv {
@@ -102,7 +103,9 @@ body {
 .namewrapper .name {
   display: flex;
   align-items: center;
-  border: var(--border);
+  border-bottom: var(--border);
+  /* border-left: var(--border); */
+  border-right: var(--border);
   /* padding-left: 1rem;
   padding-right: 1rem; */
   cursor: pointer;
@@ -111,13 +114,12 @@ body {
   z-index: 1;
 }
 
-.namewrapper .name div{ 
+.namewrapper .name div {
   pointer-events: none;
   display: inline-block;
   white-space: nowrap;
-  overflow:hidden;
+  overflow: hidden;
   text-overflow: ellipsis;
-
   padding-left: 1rem;
   padding-right: 1rem;
 }
