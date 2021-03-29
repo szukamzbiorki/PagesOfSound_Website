@@ -33,7 +33,7 @@ body {
   margin: 0;
   font-size: clamp(1.1rem, 1.5vw, 2rem);
   font-family: 'Diatype Mono';
-  font-feature-settings: "ss15", "ss07";
+  font-feature-settings: "ss15", "ss07", "zero";
 }
 
 .wrapper {
@@ -71,7 +71,7 @@ body {
   border-left: var(--border);
   display: grid;
   width: 100%;
-  grid-template-columns: 1fr 1fr 12fr 2fr;
+  grid-template-columns: 1fr 1fr 12fr 2.5fr;
 }
 
 .special {
@@ -89,10 +89,19 @@ body {
 }
 
 .playpause {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: auto;
   padding-left: 20px;
   cursor: pointer;
   font-size: 30px;
+}
+
+.time {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .squarediv {
