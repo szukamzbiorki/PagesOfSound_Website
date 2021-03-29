@@ -144,6 +144,10 @@ body {
   padding-right: 1rem;
 }
 
+.active {
+  background-color: black;
+}
+
 .podcasts {
   position: relative;
   overflow: scroll;

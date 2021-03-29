@@ -42,9 +42,11 @@ const inforect = document.querySelector("#inforect");
 
 //name selector
 names.addEventListener("click", function (clickname) {
+
   current_student = clickname.target.dataset.name;
   setFiles(current_student);
   // console.log(globaldata);
+  
 
 
 });
