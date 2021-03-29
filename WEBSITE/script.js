@@ -2,6 +2,8 @@
 const playpause = document.querySelector(".playpause");
 const squarediv = document.querySelector(".squarediv");
 
+
+var globaldata;
 // squarediv.style.width = squarediv.offsetHeight;
 
 // const infobar = document.querySelector("#infobar");
@@ -15,7 +17,7 @@ $("#infobar").click(function(){
 });
 
 
-let current_student = "stefanniia";
+let current_student = "bartosz";
 let audio = new Audio("./podcasts/"+current_student+"/podcast_1.mp3");
 
 let playtime = document.querySelector(".playtime");
@@ -23,9 +25,9 @@ let volumeslider = document.querySelector(".volume");
 const player = document.querySelector(".player");
 const time = document.querySelector(".time");
 
-const podcastone = document.querySelector(".one");
-const podcasttwo = document.querySelector(".two");
-const podcasttree = document.querySelector(".tree");
+const podcastone = document.querySelector("#one");
+const podcasttwo = document.querySelector("#two");
+const podcasttree = document.querySelector("#three");
 
 let names = document.querySelector(".namewrapper");
 
@@ -34,28 +36,36 @@ const coverimg2 = document.querySelector(".coverimg2");
 const coverimg3 = document.querySelector(".coverimg3");
 
 const leftinfo = document.querySelector("#leftinfo");
+const rightinfo = document.querySelector("#rightinfo");
 const inforect = document.querySelector("#inforect");
 // const contents_indiv = document.querySelector("#contents_indiv");
 
 //name selector
+names.addEventListener("click", function (clickname) {
+  current_student = clickname.target.dataset.name;
+  setFiles(current_student);
+  // console.log(globaldata);
+
+
+});
+
 
 function setFiles(current_student) {
   // console.log(`./podcasts/${current_student}/cover_1.jpg`)
   coverimg1.src = "./podcasts/"+current_student+"/cover_1.jpg";
   coverimg2.src = "./podcasts/"+current_student+"/cover_2.jpg";
   coverimg3.src = "./podcasts/"+current_student+"/cover_3.jpg";
-  document.getElementById("contents_indiv").src = "./podcasts/"+current_student+"/contents.js";
-  // import { person_data } from "./podcasts/"+current_student+"/contents.js";
-  // console.log(person_data.title1);
+
+  // load the json here
+  $.getJSON("./podcasts/"+current_student+"/contents.json", function(json){
+    // console.log(json);
+    globaldata = json;
+    leftinfo.innerHTML = globaldata.title1;
+    inforect.innerHTML = globaldata.description;
+  });
 }
 
-names.addEventListener("click", function (clickname) {
-  current_student = clickname.target.dataset.name;
-  setFiles(current_student);
-  // leftinfo.innerHTML = person_data.title1;
-  // inforect.innerHTML = description;
 
-});
 
 //podcastselector123
 podcastone.addEventListener('click', function(e) {
@@ -107,3 +117,41 @@ playtime.onchange = function() {
 volumeslider.onchange = function() {
   audio.volume = volumeslider.value/100;
 };
+
+
+
+
+
+// *********************
+// This Code is for only the floating card in right bottom corner
+// **********************
+
+
+const podcast_div = document.querySelector(".podcasts");
+const podcasts = document.querySelectorAll(".podcast");
+// const navLi = document.querySelectorAll("nav .container ul li");
+
+
+
+$(".podcasts").scroll(function (event) {
+    var scroll = $(".podcasts").scrollTop();
+    console.log(scroll);
+
+  // console.log(podcasts);
+  let current = "";
+  podcasts.forEach((podcast) => {
+    const sectionTop = podcast.offsetTop;
+    // console.log(podcast.offsetTop);
+    const sectionHeight = podcast.clientHeight;
+    // console.log(podcast.clientHeight);
+    // console.log(window.pageYOffset);
+    if (scroll >= sectionTop - sectionHeight / 2) {
+      current = podcast.getAttribute("number");
+      console.log(current);
+      // console.log
+    }
+  });
+rightinfo.innerHTML = current + "/3";
+// leftinfo.innerHTML = titles[current];
+
+});
