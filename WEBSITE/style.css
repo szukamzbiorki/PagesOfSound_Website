@@ -143,6 +143,7 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(13, 1fr);
+  padding-bottom: calc(100vw/13);
 }
 
 .podcasts .cover {
@@ -204,6 +205,7 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-content: flex-start;
+  margin: 0;
 }
 
 /* .leftinfo {
@@ -226,7 +228,9 @@ body {
 }
 
 .inforect {
-  padding: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 0px;
   z-index: 50;
   position: fixed;
   height: calc(100vh/15*13);
