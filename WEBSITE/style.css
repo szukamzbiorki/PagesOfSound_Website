@@ -18,7 +18,7 @@
 :root {
   --grey: rgb(131, 131, 131);
   --red: rgb(255, 53, 46);
-  --border: black 1px dotted;
+  --border: black 1px solid;
 }
 
 * {
@@ -92,8 +92,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: auto;
+  /* margin: auto; */
   padding-left: 20px;
+  padding-top: 3px;
   cursor: pointer;
   font-size: 30px;
 }

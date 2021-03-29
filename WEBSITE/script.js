@@ -21,6 +21,7 @@ let audio = new Audio("./podcasts/"+current_student+"/podcast_1.mp3");
 let playtime = document.querySelector(".playtime");
 let volumeslider = document.querySelector(".volume");
 const player = document.querySelector(".player");
+const time = document.querySelector(".time");
 
 const podcastone = document.querySelector(".one");
 const podcasttwo = document.querySelector(".two");
@@ -58,7 +59,7 @@ podcasttwo.addEventListener('click', function(e) {
   audio.src = "./podcasts/"+current_student+"/podcast_2.mp3"
 });
 podcasttree.addEventListener('click', function(e) {
-  audio.src = "/podcasts/"+current_student+"/podcast_3.mp3"
+  audio.src = "./podcasts/"+current_student+"/podcast_3.mp3"
 });
 
 setImages(current_student)
@@ -78,12 +79,24 @@ else {
 //playtimeslider
 const slowclock = function() {
   playtime.value = audio.currentTime / audio.duration * 600;
+  if((Math.round(audio.currentTime % 60))<10){
+  time.innerHTML = Math.round(audio.currentTime / 60) + ":0" + Math.round(audio.currentTime % 60) + "/" + Math.round(audio.duration / 60) + ":" + Math.round(audio.duration % 60);
+  }
+  else{
+  time.innerHTML = Math.round(audio.currentTime / 60) + ":" + Math.round(audio.currentTime % 60) + "/" + Math.round(audio.duration / 60) + ":" + Math.round(audio.duration % 60);
+ }
   // timeindicator1.innerHTML = Math.round(audio.currentTime / 60) + ":" + Math.round(audio.currentTime % 60);
 };
-setIntervalBar = setInterval(slowclock, 200);
+
+setIntervalBar = setInterval(slowclock, 995);
+
 playtime.onchange = function() {
   audio.currentTime = audio.duration * (playtime.value / 600);
+  // $("time").html(audio.currentTime + "/" + audio.duration);
+  // time.innerHTML = Math.round(audio.currentTime / 60) + ":" + Math.round(audio.currentTime % 60) + "/" + Math.round(audio.duration / 60) + ":" + Math.round(audio.duration % 60);
 }
+
+
 // volume slider
 volumeslider.onchange = function() {
   audio.volume = volumeslider.value/100;
