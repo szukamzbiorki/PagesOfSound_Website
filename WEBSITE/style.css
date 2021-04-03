@@ -145,6 +145,7 @@ body {
 }
 
 .active {
+  color: var(--grey);
   background-color: black;
 }
 
