@@ -46,7 +46,7 @@ names.addEventListener("click", function (clickname) {
   current_student = clickname.target.dataset.name;
   setFiles(current_student);
   // console.log(globaldata);
-  
+
 
 
 });
@@ -70,7 +70,7 @@ function setFiles(current_student) {
     inforect.innerHTML = globaldata.description;
     $(".podcasts").scroll(function (event) {
         var scroll = $(".podcasts").scrollTop();
-        console.log(scroll);
+        // console.log(scroll);
 
       // console.log(podcasts);
       let current = "";
@@ -82,7 +82,7 @@ function setFiles(current_student) {
         // console.log(window.pageYOffset);
         if (scroll >= sectionTop - sectionHeight / 2) {
           current = podcast.getAttribute("number");
-          console.log(current);
+          // console.log(current);
           // console.log
         }
       });
