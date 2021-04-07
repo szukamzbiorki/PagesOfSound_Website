@@ -17,8 +17,8 @@ $("#infobar").click(function(){
 });
 
 
-let current_student = "bartosz";
-let audio = new Audio("./podcasts/"+current_student+"/podcast_1.mp3");
+let current_student_name = "bartosz";
+let audio = new Audio("./podcasts/"+current_student_name+"/podcast_1.mp3");
 
 let playtime = document.querySelector(".playtime");
 let volumeslider = document.querySelector(".volume");
@@ -42,25 +42,33 @@ const inforect = document.querySelector("#inforect");
 
 //name selector
 names.addEventListener("click", function (clickname) {
-
-  current_student = clickname.target.dataset.name;
-  setFiles(current_student);
-  // console.log(globaldata);
-
-
-
+  current_student_name = clickname.target.dataset.name;
+  setFiles(current_student_name);
 });
 
 
-function setFiles(current_student) {
-  // console.log(`./podcasts/${current_student}/cover_1.jpg`)
-  coverimg1.src = "./podcasts/"+current_student+"/cover_1.jpg";
-  coverimg2.src = "./podcasts/"+current_student+"/cover_2.jpg";
-  coverimg3.src = "./podcasts/"+current_student+"/cover_3.jpg";
+//active selector
+var NAME = document.querySelectorAll('.name');
 
-  // load the json here
-  $.getJSON("./podcasts/"+current_student+"/contents.json", function(json){
-    // console.log(json);
+NAME.forEach(function(el, i) {
+  el.addEventListener('mousedown', function(event) {
+  	reset(NAME);
+		event.target.classList.add('active');
+  });
+});
+
+function reset(NAME){
+	NAME.forEach(function(el, i) {
+		el.classList.remove('active');
+  });
+}
+
+function setFiles(current_student_name) {
+  coverimg1.src = "./podcasts/"+current_student_name+"/cover_1.jpg";
+  coverimg2.src = "./podcasts/"+current_student_name+"/cover_2.jpg";
+  coverimg3.src = "./podcasts/"+current_student_name+"/cover_3.jpg";
+
+  $.getJSON("./podcasts/"+current_student_name+"/contents.json", function(json){
     globaldata = json;
     var titles=[];
     titles[0] = globaldata.title1;
@@ -95,19 +103,18 @@ function setFiles(current_student) {
 }
 
 
-
 //podcastselector123
-podcastone.addEventListener('click', function(e) {
-  audio.src = "./podcasts/"+current_student+"/podcast_1.mp3";
+podcastone.addEventListener('click', function() {
+  audio.src = "./podcasts/"+current_student_name+"/podcast_1.mp3";
 });
-podcasttwo.addEventListener('click', function(e) {
-  audio.src = "./podcasts/"+current_student+"/podcast_2.mp3";
+podcasttwo.addEventListener('click', function() {
+  audio.src = "./podcasts/"+current_student_name+"/podcast_2.mp3";
 });
-podcasttree.addEventListener('click', function(e) {
-  audio.src = "./podcasts/"+current_student+"/podcast_3.mp3";
+podcasttree.addEventListener('click', function() {
+  audio.src = "./podcasts/"+current_student_name+"/podcast_3.mp3";
 });
 
-setFiles(current_student);
+setFiles(current_student_name);
 
 // playpause button
 playpause.addEventListener('click', function(e) {

@@ -17,6 +17,8 @@
 
 :root {
   --grey: rgb(131, 131, 131);
+  --darkgrey: rgb(107, 107, 107);
+
   --red: rgb(255, 53, 46);
   --border: black 1px solid;
 }
@@ -132,6 +134,11 @@ body {
   position: relative;
   overflow: hidden;
   z-index: 1;
+  transition: background-color .5s ease;
+}
+
+.namewrapper .name:hover{
+  background-color: var(--darkgrey);
 }
 
 .namewrapper .name div {
@@ -145,7 +152,9 @@ body {
 }
 
 .active {
-  background-color: black;
+  /* color: var(--grey);
+  background-color: black; */
+  background: linear-gradient(90deg, rgb(131 131 131) 0%, rgb(255 95 95) 20%, rgb(131 131 131) 100%);
 }
 
 .podcasts {
@@ -216,8 +225,6 @@ body {
 
 .podcasts .cover .textoverlay:hover {
   opacity: 100%;
-  /* filter: brightness(0.8); */
-  /* filter: drop-shadow(); */
 }
 
 .infobar {
