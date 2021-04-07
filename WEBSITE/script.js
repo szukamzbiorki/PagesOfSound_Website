@@ -44,18 +44,23 @@ const inforect = document.querySelector("#inforect");
 names.addEventListener("click", function (clickname) {
   current_student_name = clickname.target.dataset.name;
   setFiles(current_student_name);
-
-  addremoveactive(clickname)
 });
 
-function addremoveactive (clickname) {
-  let allactive = document.querySelectorAll(".active");
-  console.log(clickname.target.classList)
-  clickname.target.classList.add("active");
-  console.log(allactive)
+//active selector
+var NAME = document.querySelectorAll('.name');
 
-  console.log(clickname.target.classList)
-};
+NAME.forEach(function(el, i) {
+  el.addEventListener('mousedown', function(event) {
+  	reset(NAME);
+		event.target.classList.add('active');
+  });
+});
+
+function reset(NAME){
+	NAME.forEach(function(el, i) {
+		el.classList.remove('active');
+  });
+}
 
 function setFiles(current_student_name) {
   coverimg1.src = "./podcasts/"+current_student_name+"/cover_1.jpg";
