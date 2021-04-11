@@ -72,7 +72,7 @@ function change() {
 
 
 let current_student_name = "bartosz";
-let audio = new Audio("./podcasts/" + current_student_name + "/podcast_1.mp3");
+let audio = new Audio();
 
 let playtime = document.querySelector(".playtime");
 let volumeslider = document.querySelector(".volume");
