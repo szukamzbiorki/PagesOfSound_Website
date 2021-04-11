@@ -56,6 +56,20 @@ window.onload = function(){
   setTimeout(function(){ document.getElementById("loader").style.display = "none"; }, 1000);
 }
 
+var text = ['loading.', 'loading..', 'loading...'];
+var counter = 0;
+var elem = document.getElementById("loader");
+var inst = setInterval(change, 500);
+
+function change() {
+  elem.innerHTML = text[counter];
+  counter++;
+  if (counter >= text.length) {
+    counter = 0;
+    // clearInterval(inst); // uncomment this if you want to stop refreshing after one cycle
+  }
+}
+
 
 let current_student_name = "bartosz";
 let audio = new Audio("./podcasts/" + current_student_name + "/podcast_1.mp3");
