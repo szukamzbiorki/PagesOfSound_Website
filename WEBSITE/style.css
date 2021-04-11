@@ -119,6 +119,33 @@ body {
   grid-template-columns: 1fr 1fr 12fr 2.5fr;
 }
 
+.specialEpisode {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 5;
+  z-index: 70;
+  background-color: var(--grey);
+  border-bottom: var(--border);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.topBar {
+  border-bottom: var(--border);
+  width: 100%;
+  height: calc(100vh/15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.close {
+  position: absolute;
+  right: 20px;
+}
+
 .special {
   grid-column-start: 1;
   grid-column-end: 3;
