@@ -41,6 +41,20 @@ const hideCursor = (e) => {
 $('.message-close').on('click', function() {
   $('.message').hide();
 });
+$('.specialEpisode').hide();
+
+$('.specialClose').on('click', function() {
+  $('.specialEpisode').hide();
+});
+
+$('.special').on('click', function() {
+  $('.specialEpisode').show();
+});
+
+window.onload = function(){
+  document.getElementById("loader").style.opacity = "0";
+  setTimeout(function(){ document.getElementById("loader").style.display = "none"; }, 1000);
+}
 
 
 let current_student_name = "bartosz";

@@ -11,16 +11,12 @@
 
 <body>
   <div class="coursorFollower" id="cursor">click</div>
-  <div class="message" id="message">
-    <span class="message-close">×</span>
-    <p>This website is a non-commercial project created my 1<sup>st</sup> year students of KABK's Graphic Design department.</p>
-    <p>The typeface used for this project is Diatype Mono Medium provided by Dinamo.</p>
-  </div>
+
   <div class="wrapper">
+    <div class="loader" id="loader"></div>
     <div class="titlebar">
       Pages Of Sound
     </div>
-
     <div class="player" id="player">
       <div class="playpause" id="playpause">&#x25B6;</div>
       <input type="range" min="0" max="100" value="75" class="volume slider">
@@ -32,7 +28,7 @@
         <div class="titleee">
           SPECIAL EPISODE
         </div>
-        <div class="close">
+        <div class="specialClose">
           X
         </div>
       </div>
@@ -194,6 +190,11 @@
 
     </div>
 
+  </div>
+  <div class="message" id="message">
+    <span class="message-close">×</span>
+    <p>This website is a non-commercial project created my 1<sup>st</sup> year students of KABK's Graphic Design department.</p>
+    <p>The typeface used for this project is Diatype Mono Medium provided by Dinamo.</p>
   </div>
   <!-- <script id="contents_indiv" src=""></script> -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
