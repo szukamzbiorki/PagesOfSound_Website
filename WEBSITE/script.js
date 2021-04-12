@@ -71,7 +71,7 @@ function change() {
 }
 
 
-let current_student_name = "stefaniia";
+let current_student_name = "leon";
 let audio = new Audio();
 
 let playtime = document.querySelector(".playtime");

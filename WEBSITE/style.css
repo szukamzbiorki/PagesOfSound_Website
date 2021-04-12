@@ -28,6 +28,7 @@
   --darkgrey: rgb(107, 107, 107);
   --red: rgb(255, 53, 46);
   --border: black 1px solid;
+  --orange: rgb(240, 199, 110);
 }
 
 * {
@@ -46,8 +47,7 @@ body {
 }
 
 .message {
-  width: 420px;
-  height: auto;
+  /* height: auto; */
   background: #eee;
   font: inherit;
   /* position: fixed; */
@@ -56,15 +56,18 @@ body {
   /* margin-left: auto; */
   /* margin-right: auto; */
   /* left: 20%; */
-  right: 10%;
+  right: 0;
   /* right: 2em; */
-  bottom: 20em;
+  top: calc(100vh/15);
+  width: calc(100vw/2);
+  height: calc(100vw / 15 * 12);
   padding: 1em;
-  box-shadow: 0px 2px 30px 10px rgba(255, 0, 0, 0.15);
-  color: rgb(255, 0, 0);
+  /* box-shadow: 0px 2px 30px 10px rgba(255, 0, 0, 0.15); */
+  /* color: var(--grey); */
   font-size: 16px;
-  color: rgb(255 95 95);
-  transform: rotate(-3deg);
+  background-color: var(--grey);
+  /* color: rgb(255 95 95); */
+  /* transform: rotate(-3deg); */
 }
 
 .message-close {
@@ -132,9 +135,11 @@ body {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  font-family: "Soyuz Grotesk";
+  font-family: "Diatype Mono";
   overflow: hidden;
   z-index: 51;
+  letter-spacing: 3px;
+  background-color: var(--grey);
 }
 
 .player {
@@ -147,6 +152,7 @@ body {
   display: grid;
   width: 100%;
   grid-template-columns: 1fr 1fr 12fr 2.5fr;
+  /* background-color: var(--orange); */
 }
 
 .specialEpisode {
