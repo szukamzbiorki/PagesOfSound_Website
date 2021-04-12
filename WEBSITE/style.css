@@ -134,7 +134,7 @@ body {
   position: relative;
   overflow: hidden;
   z-index: 1;
-  transition: background-color .5s ease;
+  transition: background-color .1s ease;
 }
 
 .namewrapper .name:hover{
@@ -154,7 +154,7 @@ body {
 .active {
   /* color: var(--grey);
   background-color: black; */
-  background: linear-gradient(90deg, rgb(131 131 131) 0%, rgb(255 95 95) 20%, rgb(131 131 131) 100%);
+  background: var(--red);
 }
 
 .podcasts {
