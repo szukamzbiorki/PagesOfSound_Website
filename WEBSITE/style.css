@@ -51,12 +51,14 @@ body {
   position: absolute;
   top:20px;
 }
+
 .message {
+  overflow: hidden;
   /* height: auto; */
   background: #eee;
   font: inherit;
   /* position: fixed; */
-  z-index: 999;
+  z-index: 50;
   position: absolute;
   /* margin-left: auto; */
   /* margin-right: auto; */
@@ -65,7 +67,7 @@ body {
   /* right: 2em; */
   top: calc(100vh/15);
   width: calc(100vw/2);
-  height: calc(100vw / 15 * 12);
+  height: calc(100vh / 15 * 13);
   padding: 0.6em;
   /* box-shadow: 0px 2px 30px 10px rgba(255, 0, 0, 0.15); */
   /* color: var(--grey); */
