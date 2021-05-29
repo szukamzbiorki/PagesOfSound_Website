@@ -28,12 +28,14 @@ const time = document.querySelector(".time");
 const podcastone = document.querySelector("#one");
 const podcasttwo = document.querySelector("#two");
 const podcasttree = document.querySelector("#three");
+const podcastfour = document.querySelector("#four");
 
 let names = document.querySelector(".namewrapper");
 
 const coverimg1 = document.querySelector(".coverimg1");
 const coverimg2 = document.querySelector(".coverimg2");
 const coverimg3 = document.querySelector(".coverimg3");
+const coverimg4 = document.querySelector(".coverimg4");
 
 const leftinfo = document.querySelector("#leftinfo");
 const rightinfo = document.querySelector("#rightinfo");
@@ -64,9 +66,16 @@ function reset(NAME){
 }
 
 function setFiles(current_student_name) {
+<<<<<<< Updated upstream
   coverimg1.src = "./podcasts/"+current_student_name+"/cover_1.jpg";
   coverimg2.src = "./podcasts/"+current_student_name+"/cover_2.jpg";
   coverimg3.src = "./podcasts/"+current_student_name+"/cover_3.jpg";
+=======
+  coverimg1.src = "./podcasts/" + current_student_name + "/cover_1.jpg";
+  coverimg2.src = "./podcasts/" + current_student_name + "/cover_2.jpg";
+  coverimg3.src = "./podcasts/" + current_student_name + "/cover_3.jpg";
+  coverimg4.src = "./podcasts/" + current_student_name + "/cover_4.jpg";
+>>>>>>> Stashed changes
 
   $.getJSON("./podcasts/"+current_student_name+"/contents.json", function(json){
     globaldata = json;
@@ -112,6 +121,9 @@ podcasttwo.addEventListener('click', function() {
 });
 podcasttree.addEventListener('click', function() {
   audio.src = "./podcasts/"+current_student_name+"/podcast_3.mp3";
+});
+podcastfour.addEventListener('click', function() {
+  audio.src = "./podcasts/" + current_student_name + "/podcast_4.mp3";
 });
 
 setFiles(current_student_name);
