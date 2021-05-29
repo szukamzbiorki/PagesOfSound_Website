@@ -75,6 +75,9 @@ function setFiles(current_student_name) {
   coverimg2.src = "./podcasts/" + current_student_name + "/cover_2.jpg";
   coverimg3.src = "./podcasts/" + current_student_name + "/cover_3.jpg";
   coverimg4.src = "./podcasts/" + current_student_name + "/cover_4.jpg";
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
   $.getJSON("./podcasts/"+current_student_name+"/contents.json", function(json){
@@ -121,6 +124,9 @@ podcasttwo.addEventListener('click', function() {
 });
 podcasttree.addEventListener('click', function() {
   audio.src = "./podcasts/"+current_student_name+"/podcast_3.mp3";
+});
+podcastfour.addEventListener('click', function() {
+  audio.src = "./podcasts/" + current_student_name + "/podcast_4.mp3";
 });
 podcastfour.addEventListener('click', function() {
   audio.src = "./podcasts/" + current_student_name + "/podcast_4.mp3";
