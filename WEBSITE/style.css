@@ -347,7 +347,7 @@ sup {
   border: var(--border);
   /* font-size: 1vw; */
   background-color: var(--grey);
-  /* opacity: 100; */
+  opacity: 100;
   transition: 0.2s;
   display: flex;
   justify-content: center;
