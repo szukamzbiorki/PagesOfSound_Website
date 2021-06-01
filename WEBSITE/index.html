@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en" dir="ltr">
 
 <head>
@@ -10,26 +9,36 @@
 </head>
 
 <body>
-  <div class=""></div>
-  <div class="wrapper">
-    <div class="titlebar">
-      Pages Of Sound
-    </div>
+  <div class="cursorFollower" id="cursor">click</div>
 
+  <div class="wrapper">
+    <div class="loader" id="loader"></div>
+    <div class="titlebar">
+      PAGES OF SOUND
+    </div>
     <div class="player" id="player">
       <div class="playpause" id="playpause">&#x25B6;</div>
       <input type="range" min="0" max="100" value="75" class="volume slider">
       <input type="range" min="0" max="600" value="0" class="playtime slider">
       <div class="time">0:00/0:00</div>
     </div>
-
+    <div class="specialEpisode">
+      <div class="topBar">
+        <div class="titleee">
+          SPECIAL EPISODE
+        </div>
+        <div class="specialClose">
+          X
+        </div>
+      </div>
+    </div>
     <div class="podcasts" id="podcasts">
       <div class="infobar" id="infobar">
         <div class="leftinfo" id="leftinfo">
-          Episode 1
+          episode_name
         </div>
         <div class="rightinfo" id="rightinfo">
-          1/3
+          About
         </div>
       </div>
       <div class="inforect" id="inforect">
@@ -79,18 +88,6 @@
       </div>
     </div>
 
-    <div class="podcast" number="4" id="four">
-      <div class="cover">
-        <div class="textoverlay">
-          <div class="rectangle">
-            click to play
-          </div>
-        </div>
-        <img class="coverimg coverimg4" alt="">
-      </div>
-    </div>
-  </div>
-
     <div class="special">
       <div>S</div>
       <div>P</div>
@@ -132,7 +129,7 @@
       <div class="name" data-name="diana">
         <div>Diana Jeremejeva</div>
       </div>
-      <div class="name" data-name="esther">
+      <div class="name" data-name="ester">
         <div>Esther Peronnet</div>
       </div>
       <div class="name" data-name="francisco">
@@ -177,7 +174,7 @@
       <div class="name" data-name="sonya">
         <div>Sonya Umanskaia</div>
       </div>
-      <div class="name" data-name="stefanniia">
+      <div class="name" data-name="stefaniia">
         <div>Stefaniia Bodnia</div>
       </div>
       <div class="name" data-name="taotao">
@@ -193,7 +190,12 @@
     </div>
 
   </div>
-  <script id="contents_indiv" src=""></script>
+  <div class="message" id="message">
+    <span class="message-close">×</span>
+    <p>This website is a non-commercial project created by 1<sup>st</sup> year students of KABK's Graphic Design department.</p>
+    <p>The typeface used for this project is Diatype Mono Medium provided by Dinamo.</p>
+  </div>
+  <!-- <script id="contents_indiv" src=""></script> -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="script.js"></script>
 </body>

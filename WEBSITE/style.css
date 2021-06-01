@@ -15,12 +15,21 @@
   font-style: normal;
 }
 
-:root {
-  --grey: rgb(131, 131, 131);
-  --darkgrey: rgb(107, 107, 107);
+::-webkit-scrollbar {
+  width: 12px;
+}
 
-  --red: rgb(255, 53, 46);
+::-webkit-scrollbar-thumb {
+  background: var(--red);
+  border: var(--border);
+}
+
+:root {
+  --grey: rgb(200, 200, 202);
+  --darkgrey: rgb(107, 107, 107);
+  --red: rgb(255, 82, 0);
   --border: black 1px solid;
+  --orange: rgb(240, 199, 110);
 }
 
 * {
@@ -38,6 +47,74 @@ body {
   font-feature-settings: "ss15", "ss07", "zero";
 }
 
+sup {
+  vertical-align: top;
+  position: relative;
+  top: -0.2em;
+}
+
+.message-close {
+  font: inherit;
+  font-size: 20px;
+  position: absolute;
+  top: 20px;
+}
+
+.message {
+  overflow: hidden;
+  /* height: auto; */
+  background: #eee;
+  font: inherit;
+  /* position: fixed; */
+  z-index: 50;
+  position: absolute;
+  /* margin-left: auto; */
+  /* margin-right: auto; */
+  /* left: 20%; */
+  right: 0;
+  /* right: 2em; */
+  top: calc(100vh/15);
+  width: calc(100vw/2);
+  height: calc(100vh / 15 * 14);
+  padding: 0.6em;
+  /* box-shadow: 0px 2px 30px 10px rgba(255, 0, 0, 0.15); */
+  /* color: var(--grey); */
+  font-size: 42px;
+  background-color: var(--red);
+  line-height: 1;
+  /* color: rgb(255 95 95); */
+  /* transform: rotate(-3deg); */
+}
+
+.message-close {
+  cursor: pointer;
+}
+
+.cursorFollower {
+  position: absolute;
+  width: 40px;
+  height: 23px;
+  background-color: var(--grey);
+  border: var(--border);
+  /* border-radius: 50%; */
+  z-index: 100;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  text-align: center;
+  -webkit-transition: opacity 0.15s ease-out;
+  -o-transition: opacity 0.15s ease-out;
+  -moz-transition: opacity 0.15s ease-out;
+  transition: opacity 0.15s ease-out;
+}
+
+.showCursorClass {
+  opacity: 1;
+}
+
 .wrapper {
   position: absolute;
   width: 100%;
@@ -46,6 +123,21 @@ body {
   grid-template-columns: 1fr 1fr 2fr;
   grid-template-rows: 1fr 1fr 12fr 1fr;
   overflow: hidden;
+  background: var(--grey);
+  /* background: linear-gradient(90deg, rgb(131 131 131) 0%, rgb(255 95 95) 50%, rgb(131 131 131) 100%); */
+}
+
+.loader {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 5;
+  background-color: var(--grey);
+  z-index: 1000;
+  transition: all 0.15s ease-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .titlebar {
@@ -59,9 +151,11 @@ body {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  font-family: "Soyuz Grotesk";
+  font-family: "Diatype Mono";
   overflow: hidden;
   z-index: 51;
+  letter-spacing: 3px;
+  background-color: var(--grey);
 }
 
 .player {
@@ -74,6 +168,36 @@ body {
   display: grid;
   width: 100%;
   grid-template-columns: 1fr 1fr 12fr 2.5fr;
+  /* background-color: var(--orange); */
+}
+
+.specialEpisode {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 5;
+  z-index: 70;
+  background-color: var(--grey);
+  border-bottom: var(--border);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  cursor: pointer;
+}
+
+.topBar {
+  border-bottom: var(--border);
+  width: 100%;
+  height: calc(100vh/15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.specialClose {
+  position: absolute;
+  right: 20px;
+  cursor: pointer;
 }
 
 .special {
@@ -88,6 +212,11 @@ body {
   justify-content: space-between;
   padding-left: 1rem;
   letter-spacing: 21px;
+  cursor: pointer;
+}
+
+.titleee {
+  width: 300px;
 }
 
 .playpause {
@@ -134,11 +263,11 @@ body {
   position: relative;
   overflow: hidden;
   z-index: 1;
-  transition: background-color .5s ease;
+  transition: background-color .1s ease;
 }
 
-.namewrapper .name:hover{
-  background-color: var(--darkgrey);
+.namewrapper .name:hover {
+  /* background-color: var(--darkgrey); */
 }
 
 .namewrapper .name div {
@@ -154,12 +283,13 @@ body {
 .active {
   /* color: var(--grey);
   background-color: black; */
-  background: linear-gradient(90deg, rgb(131 131 131) 0%, rgb(255 95 95) 20%, rgb(131 131 131) 100%);
+  background-color: var(--red);
+  /* background: linear-gradient(90deg, rgb(131 131 131) 0%, rgb(255 95 95) 20%, rgb(131 131 131) 100%); */
 }
 
 .podcasts {
   position: relative;
-  overflow: scroll;
+  /* overflow: scroll; */
   width: 100%;
   grid-column-start: 3;
   grid-column-end: 4;
@@ -170,6 +300,8 @@ body {
   grid-template-rows: repeat(13, 1fr);
   /* padding-bottom: calc(100vw / 13); */
   margin: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 .podcasts .cover {
@@ -238,6 +370,7 @@ body {
   width: 50vw;
   max-width: 50vw;
   background-color: var(--grey);
+  /* background: linear-gradient(90deg, rgb(255 95 95) 50%, rgb(131 131 131) 100%); */
   border-top: var(--border);
   border-bottom: var(--border);
   -webkit-transition: all 0.5s ease-out;
