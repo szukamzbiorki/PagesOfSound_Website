@@ -156,6 +156,7 @@ sup {
   z-index: 51;
   letter-spacing: 3px;
   background-color: var(--grey);
+  cursor: pointer;
 }
 
 .player {

@@ -189,11 +189,19 @@ playpause.addEventListener('click', function(e) {
 //playtimeslider
 const slowclock = function() {
   playtime.value = audio.currentTime / audio.duration * 600;
+  if ((Math.round(audio.duration % 60)) < 10) {
+  if ((Math.round(audio.currentTime % 60)) < 10) {
+    time.innerHTML = Math.round(audio.currentTime / 60) + ":0" + Math.round(audio.currentTime % 60) + "/" + Math.round(audio.duration / 60) + ":0" + Math.round(audio.duration % 60);
+  } else {
+    time.innerHTML = Math.round(audio.currentTime / 60) + ":" + Math.round(audio.currentTime % 60) + "/" + Math.round(audio.duration / 60) + ":0" + Math.round(audio.duration % 60);
+  }
+}else{
   if ((Math.round(audio.currentTime % 60)) < 10) {
     time.innerHTML = Math.round(audio.currentTime / 60) + ":0" + Math.round(audio.currentTime % 60) + "/" + Math.round(audio.duration / 60) + ":" + Math.round(audio.duration % 60);
   } else {
     time.innerHTML = Math.round(audio.currentTime / 60) + ":" + Math.round(audio.currentTime % 60) + "/" + Math.round(audio.duration / 60) + ":" + Math.round(audio.duration % 60);
   }
+}
   // timeindicator1.innerHTML = Math.round(audio.currentTime / 60) + ":" + Math.round(audio.currentTime % 60);
 };
 
