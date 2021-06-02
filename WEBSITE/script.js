@@ -112,6 +112,7 @@ NAME.forEach(function(el, i) {
   el.addEventListener('click', function(event) {
     reset(NAME);
     event.target.classList.add('active');
+    podcast_div.scrollTo(0, 0);
   });
 });
 
