@@ -1,6 +1,9 @@
 //play pause square
 const playpause = document.querySelector(".playpause");
 const squarediv = document.querySelector(".squarediv");
+
+const podcast_div = document.querySelector(".podcasts");
+const podcasts = document.querySelectorAll(".podcast");
 // var cursor = document.querySelector("#cursor");
 
 var globaldata;
@@ -40,6 +43,7 @@ const hideCursor = (e) => {
 
 $('.name').on('click', function() {
   $('.message').hide();
+  podcast_div.scrollTo(0, 0);
 });
 $('.specialEpisode').hide();
 
@@ -71,7 +75,7 @@ function change() {
 }
 
 
-let current_student_name = "leon";
+let current_student_name = "";
 let audio = new Audio();
 
 let playtime = document.querySelector(".playtime");
@@ -113,6 +117,7 @@ NAME.forEach(function(el, i) {
     reset(NAME);
     event.target.classList.add('active');
     podcast_div.scrollTo(0, 0);
+    // $('.message').hide();
   });
 });
 
@@ -228,6 +233,4 @@ volumeslider.onchange = function() {
 // **********************
 
 
-const podcast_div = document.querySelector(".podcasts");
-const podcasts = document.querySelectorAll(".podcast");
 // const navLi = document.querySelectorAll("nav .container ul li");
