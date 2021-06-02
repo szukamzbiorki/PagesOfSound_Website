@@ -38,7 +38,7 @@ const hideCursor = (e) => {
   circle.classList.remove("showCursorClass");
 }
 
-$('.message-close').on('click', function() {
+$('.name').on('click', function() {
   $('.message').hide();
 });
 $('.specialEpisode').hide();
@@ -161,7 +161,7 @@ function setFiles(current_student_name) {
   });
 }
 
-
+audio.src = "./podcasts/introduction.mp3";
 //podcastselector123
 podcastone.addEventListener('click', function() {
   audio.src = "./podcasts/" + current_student_name + "/podcast_1.mp3";
