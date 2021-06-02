@@ -386,6 +386,10 @@ sup {
   margin: 0;
 }
 
+.midinfo {
+  align-self: center;
+}
+
 /* .leftinfo {
   display: flex;
   align-items: center;

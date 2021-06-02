@@ -170,12 +170,15 @@ audio.src = "./podcasts/introduction.mp3";
 //podcastselector123
 podcastone.addEventListener('click', function() {
   audio.src = "./podcasts/" + current_student_name + "/podcast_1.mp3";
+  audio.play();
 });
 podcasttwo.addEventListener('click', function() {
   audio.src = "./podcasts/" + current_student_name + "/podcast_2.mp3";
+  audio.play();
 });
 podcasttree.addEventListener('click', function() {
   audio.src = "./podcasts/" + current_student_name + "/podcast_3.mp3";
+  audio.play();
 });
 
 setFiles(current_student_name);
