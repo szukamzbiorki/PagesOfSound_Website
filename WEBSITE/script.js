@@ -1,6 +1,9 @@
 //play pause square
 const playpause = document.querySelector(".playpause");
 const squarediv = document.querySelector(".squarediv");
+
+const podcast_div = document.querySelector(".podcasts");
+const podcasts = document.querySelectorAll(".podcast");
 // var cursor = document.querySelector("#cursor");
 
 var globaldata;
@@ -38,8 +41,9 @@ const hideCursor = (e) => {
   circle.classList.remove("showCursorClass");
 }
 
-$('.message-close').on('click', function() {
+$('.name').on('click', function() {
   $('.message').hide();
+  podcast_div.scrollTo(0, 0);
 });
 $('.specialEpisode').hide();
 
@@ -71,7 +75,7 @@ function change() {
 }
 
 
-let current_student_name = "leon";
+let current_student_name = "";
 let audio = new Audio();
 
 let playtime = document.querySelector(".playtime");
@@ -112,6 +116,8 @@ NAME.forEach(function(el, i) {
   el.addEventListener('click', function(event) {
     reset(NAME);
     event.target.classList.add('active');
+    podcast_div.scrollTo(0, 0);
+    // $('.message').hide();
   });
 });
 
@@ -160,16 +166,19 @@ function setFiles(current_student_name) {
   });
 }
 
-
+audio.src = "./podcasts/introduction.mp3";
 //podcastselector123
 podcastone.addEventListener('click', function() {
   audio.src = "./podcasts/" + current_student_name + "/podcast_1.mp3";
+  audio.play();
 });
 podcasttwo.addEventListener('click', function() {
   audio.src = "./podcasts/" + current_student_name + "/podcast_2.mp3";
+  audio.play();
 });
 podcasttree.addEventListener('click', function() {
   audio.src = "./podcasts/" + current_student_name + "/podcast_3.mp3";
+  audio.play();
 });
 
 setFiles(current_student_name);
@@ -188,11 +197,19 @@ playpause.addEventListener('click', function(e) {
 //playtimeslider
 const slowclock = function() {
   playtime.value = audio.currentTime / audio.duration * 600;
+  if ((Math.round(audio.duration % 60)) < 10) {
+  if ((Math.round(audio.currentTime % 60)) < 10) {
+    time.innerHTML = Math.round(audio.currentTime / 60) + ":0" + Math.round(audio.currentTime % 60) + "/" + Math.round(audio.duration / 60) + ":0" + Math.round(audio.duration % 60);
+  } else {
+    time.innerHTML = Math.round(audio.currentTime / 60) + ":" + Math.round(audio.currentTime % 60) + "/" + Math.round(audio.duration / 60) + ":0" + Math.round(audio.duration % 60);
+  }
+}else{
   if ((Math.round(audio.currentTime % 60)) < 10) {
     time.innerHTML = Math.round(audio.currentTime / 60) + ":0" + Math.round(audio.currentTime % 60) + "/" + Math.round(audio.duration / 60) + ":" + Math.round(audio.duration % 60);
   } else {
     time.innerHTML = Math.round(audio.currentTime / 60) + ":" + Math.round(audio.currentTime % 60) + "/" + Math.round(audio.duration / 60) + ":" + Math.round(audio.duration % 60);
   }
+}
   // timeindicator1.innerHTML = Math.round(audio.currentTime / 60) + ":" + Math.round(audio.currentTime % 60);
 };
 
@@ -219,6 +236,4 @@ volumeslider.onchange = function() {
 // **********************
 
 
-const podcast_div = document.querySelector(".podcasts");
-const podcasts = document.querySelectorAll(".podcast");
 // const navLi = document.querySelectorAll("nav .container ul li");
