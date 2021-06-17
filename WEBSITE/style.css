@@ -180,9 +180,6 @@ sup {
   z-index: 70;
   background-color: var(--grey);
   border-bottom: var(--border);
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
   cursor: pointer;
 }
 
@@ -191,7 +188,6 @@ sup {
   width: 100%;
   height: calc(100vh/15);
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 
@@ -202,6 +198,7 @@ sup {
 }
 
 .special {
+  padding-left: 1rem;
   grid-column-start: 1;
   grid-column-end: 3;
   grid-row-start: 2;
@@ -210,14 +207,11 @@ sup {
   border-right: var(--border);
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding-left: 1rem;
-  letter-spacing: 21px;
   cursor: pointer;
 }
 
-.titleee {
-  width: 300px;
+.publicationtitle{
+  padding-left: 1rem;
 }
 
 .playpause {
@@ -529,4 +523,46 @@ how to remove the virtical space around the range input in IE*/
     margin: 0;
     /*Edge starts the margin from the thumb, not the track as other browsers do*/
   }
+}
+
+.pagecontainer {
+  color: white;
+  /* font-family: Tahoma;  */
+  background: black;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  cursor: none;
+  justify-content: center;
+}
+
+.pagecontainer .page {
+  /* position: relative; */
+  height: 70%;
+  width: 80%;
+  background: white;
+
+}
+
+.pagenumber {
+  bottom: 0px;
+  padding: 20px;
+  position: absolute;
+  opacity: 40%;
+  font-size: clamp(0.5rem, 0.7vw, 1rem);
+}
+
+.arrow {
+  mix-blend-mode: exclusion;
+  font-size: clamp(6.6rem, 9vw, 12rem);
+  position: absolute;
+  transform: translate(-50%, -50%);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
+  transition: transform 0.2s ease-in-out;
+  will-change: transform;
 }
