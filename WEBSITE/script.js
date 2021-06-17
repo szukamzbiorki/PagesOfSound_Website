@@ -271,17 +271,221 @@ let pagecontent = [{
     author: "Diana",
     img_url: "./books/diana/p3.png"
   },
-
-
-
-
-
-
   {
-    author: "Leon de Bruijn",
+    author: "Diana",
+    img_url: "./books/diana/p4.png"
+  },
+  {
+    author: "Francisco Sebire Munk",
+    img_url: "./books/fran/p1.png"
+  },
+  {
+    author: "Francisco Sebire Munk",
+    img_url: "./books/fran/p2.png"
+  },
+  {
+    author: "Francisco Sebire Munk",
+    img_url: "./books/fran/p3.png"
+  },
+  {
+    author: "Francisco Sebire Munk",
+    img_url: "./books/fran/p4.png"
+  },
+  {
+    author: "Jack",
+    img_url: "./books/jack/p1.png"
+  },
+  {
+    author: "Jack",
+    img_url: "./books/jack/p2.png"
+  },
+  {
+    author: "Jade",
+    img_url: "./books/jade/p1.png"
+  },
+  {
+    author: "Jade",
+    img_url: "./books/jade/p2.png"
+  },
+  {
+    author: "Jade",
+    img_url: "./books/jade/p3.png"
+  },
+  {
+    author: "Jade",
+    img_url: "./books/jade/p4.png"
+  },
+  {
+    author: "Jade",
+    img_url: "./books/jade/p4.png"
+  },
+  {
+    author: "Julie",
+    img_url: "./books/julie/p1.png"
+  },
+  {
+    author: "Julie",
+    img_url: "./books/julie/p2.png"
+  },
+  {
+    author: "Julie",
+    img_url: "./books/julie/p3.png"
+  },
+  {
+    author: "Julie",
+    img_url: "./books/julie/p4.png"
+  },
+  {
+    author: "Lara",
+    img_url: "./books/lara/p1.png"
+  },
+  {
+    author: "Lara",
+    img_url: "./books/lara/p2.png"
+  },
+  {
+    author: "Lara",
+    img_url: "./books/lara/p3.png"
+  },
+  {
+    author: "Lara",
+    img_url: "./books/lara/p4.png"
+  },
+  {
+    author: "Leon",
+    img_url: "./books/leon/p1.png"
+  },
+  {
+    author: "Leon",
+    img_url: "./books/leon/p2.png"
+  },
+  {
+    author: "Leon",
+    img_url: "./books/leon/p3.png"
+  },
+  {
+    author: "Leon",
     img_url: "./books/leon/p4.png"
-  }
-
+  },
+  {
+    author: "Lucky",
+    img_url: "./books/lucky/p1.png"
+  },
+  {
+    author: "Lucky",
+    img_url: "./books/lucky/p2.png"
+  },
+  {
+    author: "Lucky",
+    img_url: "./books/lucky/p3.png"
+  },
+  {
+    author: "Lucky",
+    img_url: "./books/lucky/p4.png"
+  },
+  {
+    author: "Merijn",
+    img_url: "./books/merijn/p1.png"
+  },
+  {
+    author: "Merijn",
+    img_url: "./books/merijn/p2.png"
+  },
+  {
+    author: "Merijn",
+    img_url: "./books/merijn/p3.png"
+  },
+  {
+    author: "Merijn",
+    img_url: "./books/merijn/p4.png"
+  },
+  {
+    author: "Sonya",
+    img_url: "./books/sonya/p1.png"
+  },
+  {
+    author: "Sonya",
+    img_url: "./books/sonya/p2.png"
+  },
+  {
+    author: "Sonya",
+    img_url: "./books/sonya/p3.png"
+  }, {
+    author: "Sonya",
+    img_url: "./books/sonya/p4.png"
+  },
+  {
+    author: "Stefa",
+    img_url: "./books/stefa/p1.png"
+  },
+  {
+    author: "Stefa",
+    img_url: "./books/stefa/p2.png"
+  },
+  {
+    author: "Stefa",
+    img_url: "./books/stefa/p3.png"
+  },
+  {
+    author: "Toatoa",
+    img_url: "./books/taotao/p1.png"
+  },
+  {
+    author: "Toatoa",
+    img_url: "./books/taotao/p2.png"
+  },
+  {
+    author: "Toatoa",
+    img_url: "./books/taotao/p3.png"
+  },
+  {
+    author: "Toni",
+    img_url: "./books/toni/p1.png"
+  },
+  {
+    author: "Toni",
+    img_url: "./books/toni/p2.png"
+  },
+  {
+    author: "Toni",
+    img_url: "./books/toni/p3.png"
+  },
+  {
+    author: "Toni",
+    img_url: "./books/toni/p4.png"
+  },
+  {
+    author: "Waleed",
+    img_url: "./books/waleed/p1.png"
+  },
+  {
+    author: "Waleed",
+    img_url: "./books/waleed/p2.png"
+  },
+  {
+    author: "Waleed",
+    img_url: "./books/waleed/p3.png"
+  },
+  {
+    author: "Waleed",
+    img_url: "./books/waleed/p4.png"
+  },
+  {
+    author: "William",
+    img_url: "./books/william/p1.png"
+  },
+  {
+    author: "William",
+    img_url: "./books/william/p2.png"
+  },
+  {
+    author: "William",
+    img_url: "./books/william/p3.png"
+  },
+  {
+    author: "William",
+    img_url: "./books/william/p4.png"
+  },
 ];
 
 //speacial episode
@@ -324,17 +528,17 @@ pagecontainer.addEventListener('mousemove', e => {
 
 function pagenumberdown() {
   if (pagenumber > 0) {
-    pagenumber = pagenumber - 2;
+    pagenumber = pagenumber -1;
     setpagenumber();
   } else {
-    pagenumber = pagecontent.length - 2;
+    pagenumber = pagecontent.length - 1;
     setpagenumber();
   }
 }
 
 function pagenumberup() {
-  if (pagenumber < pagecontent.length - 2) {
-    pagenumber = pagenumber + 2;
+  if (pagenumber < pagecontent.length - 1) {
+    pagenumber = pagenumber + 1;
     setpagenumber();
   } else {
     pagenumber = 0;
