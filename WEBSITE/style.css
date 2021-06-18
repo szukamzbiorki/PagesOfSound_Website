@@ -538,10 +538,10 @@ how to remove the virtical space around the range input in IE*/
 }
 
 .pagecontainer .page {
-  /* position: relative; */
+  position: relative;
   height: 70%;
   width: 80%;
-  background: white;
+  top: -5%;
 
 }
 
