@@ -260,6 +260,10 @@ let pagecontent = [{
     img_url: "./books/anna/p3.png"
   },
   {
+    author: "Bartosz Pierściński",
+    img_url: "./books/bartek/p1.png"
+  },
+  {
     author: "Diana Jeremejeva",
     img_url: "./books/diana/p1.png"
   },
