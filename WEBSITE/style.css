@@ -554,8 +554,10 @@ how to remove the virtical space around the range input in IE*/
 }
 
 .arrow {
-  mix-blend-mode: exclusion;
+  /* mix-blend-mode: exclusion; */
   font-size: clamp(6.6rem, 9vw, 12rem);
+  color: var(--grey);
+  -webkit-text-stroke: 1px black;
   position: absolute;
   transform: translate(-50%, -50%);
   -webkit-user-select: none;
@@ -563,6 +565,6 @@ how to remove the virtical space around the range input in IE*/
   -ms-user-select: none;
   user-select: none;
   pointer-events: none;
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.1s ease-in-out;
   will-change: transform;
 }

@@ -482,6 +482,18 @@ let pagecontent = [{
     author: "William Kosse",
     img_url: "./books/william/p4.png"
   },
+  {
+    author: "Inge Maier",
+    img_url: "./books/inge/1.png"
+  },
+  {
+  author: "Inge Maier",
+  img_url: "./books/inge/2.png"
+},
+{
+  author: "Inge Maier",
+  img_url: "./books/inge/3.png"
+},
 ];
 
 //speacial episode
