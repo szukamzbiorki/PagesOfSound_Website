@@ -563,3 +563,11 @@ function setpagenumber() {
   page.style.backgroundSize = "auto 100% ";
   publicationtitle.innerHTML = "<p>" + pagecontent[pagenumber].author + "</p>";
 }
+
+// var imagesPreload = [];
+// function preload() {
+//     for (var i = 0; i < arguments.length; i++) {
+//         imagesPreload[i] = new Image();
+//         imagesPreload[i].src = preload.arguments[i];
+//     }
+// }
