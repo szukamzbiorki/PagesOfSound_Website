@@ -562,12 +562,22 @@ function setpagenumber() {
   page.style.background = "url(" + pagecontent[pagenumber].img_url + ")center no-repeat";
   page.style.backgroundSize = "auto 100% ";
   publicationtitle.innerHTML = "<p>" + pagecontent[pagenumber].author + "</p>";
+  preload();
 }
 
-// var imagesPreload = [];
-// function preload() {
-//     for (var i = 0; i < arguments.length; i++) {
-//         imagesPreload[i] = new Image();
-//         imagesPreload[i].src = preload.arguments[i];
-//     }
-// }
+
+function preload() {
+  var imagesPreload = [];
+  imagesPreload[1] = new Image();
+  imagesPreload[2] = new Image();
+  if(pagenumber===0){
+    imagesPreload[1].src = pagecontent[1].img_url;
+    imagesPreload[2].src = pagecontent[pagecontent.length - 1].img_url;
+  }else if(pagenumber===pagecontent.length - 1){
+    imagesPreload[1].src = pagecontent[1].img_url;
+    imagesPreload[2].src = pagecontent[pagecontent.length - 2].img_url;
+  }else{
+    imagesPreload[1].src = pagecontent[pagenumber-1].img_url;
+    imagesPreload[2].src = pagecontent[pagenumber+1].img_url;
+  }
+}
